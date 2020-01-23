@@ -7,7 +7,29 @@ public class CreateUserRequest {
 	@JsonProperty
 	private String username;
 
-	public String getUsername() {
+	@JsonProperty
+    private String password;
+
+    @JsonProperty
+    private String mirrorPassword;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(final String password) {
+        this.password = password;
+    }
+
+    public String getMirrorPassword() {
+        return mirrorPassword;
+    }
+
+    public void setMirrorPassword(final String mirrorPassword) {
+        this.mirrorPassword = mirrorPassword;
+    }
+
+    public String getUsername() {
 		return username;
 	}
 
