@@ -1,5 +1,7 @@
 package com.example.demo.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -19,7 +21,9 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
-	
+
+    public static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
 	@Autowired
 	private UserRepository userRepository;
 	
@@ -54,12 +58,14 @@ public class UserController {
 		final boolean validPassword = validatePassword(password, mirrorPassword);
 
 		if (!validPassword) {
+            logger.error("User <" + createUserRequest.getUsername() + "> was not created. Invalid password");
 		    return ResponseEntity.badRequest().build();
         }
 
 		user.setPassword(bCryptPasswordEncoder.encode(password));
         user.setMirrorPassword(user.getPassword());
 		userRepository.save(user);
+		logger.info("User <" + createUserRequest.getUsername() + "> was created successfully.");
 		return ResponseEntity.ok(user);
 	}
 

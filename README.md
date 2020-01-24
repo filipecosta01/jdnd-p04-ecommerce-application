@@ -60,3 +60,20 @@ Unit tests demonstrate at least 80% code coverage.
 
 ### Build job 2 - Finish
 ![Build Step 2](https://drive.google.com/uc?export=view&id=1drmSdPefdCud1NGkw0ImEx14yr3FS0Yi)
+
+## Splunk
+
+### Query - Default
+![Splunk default query](https://drive.google.com/uc?export=view&id=1eBFrCWCn0z0sIZkE2N8e6k4DFGnIa4Sb)
+
+### Query - Requests per Minute
+![Splunk query requests per minute](https://drive.google.com/uc?export=view&id=1c2drk4Hb9iZWcSqEq7uubaftdJC8pX7T)
+
+### Chart - Requests per Minute
+![Splunk chart requests per minute](https://drive.google.com/uc?export=view&id=1-_BCz2ihFFoRBNPC56xGsaBiuTSPerXf)
+
+### Alert - Main page
+![Splunk alert main page](https://drive.google.com/uc?export=view&id=1GlMC4ivwgKW0zPdehD6yotbap8opCFgb)
+
+### Alert - Configuration page
+![Splunk alert configuration page](https://drive.google.com/uc?export=view&id=1VNYBTmQJB-7TEJEhh6a4Goacydcv0W5h)

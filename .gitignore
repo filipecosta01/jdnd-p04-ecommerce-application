@@ -8,3 +8,11 @@
 ehthumbs.db
 Thumbs.db
 .idea/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.iml
+.eclipse
